@@ -1,0 +1,9 @@
+# IDE
+.vscode
+.idea
+
+# Mac
+.DS_Store
+
+# C++
+*.dSYM/
