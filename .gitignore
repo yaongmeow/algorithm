@@ -4,3 +4,9 @@
 
 # Mac
 .DS_Store
+
+# Language
+.venv
+
+# Etc
+*.txt
