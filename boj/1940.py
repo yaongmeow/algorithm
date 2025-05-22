@@ -1,7 +1,5 @@
 import sys
 
-sys.stdin = open("input.txt")
-
 data = sys.stdin.read().split()
 
 n = int(data[0])

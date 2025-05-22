@@ -6,8 +6,6 @@ def cnt(arr, length):
 
 import sys
 
-sys.stdin = open("input.txt")
-
 data = sys.stdin.read().split()
 
 k = int(data[0])
