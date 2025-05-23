@@ -27,27 +27,24 @@ public class Main {
             }
         }
 
-        HashMap<Integer, Integer> am = new HashMap<>();
-        for(int i = 1; i <= n; i++) am.put(i, 0);
-
         Queue<Integer> q = new LinkedList<>();
-        boolean[] vis = new boolean[n + 1];
+        int[] vis = new int[n + 1];
         int cnt = 1;
 
         q.add(r);
-        vis[r] = true;
+        vis[r] = cnt++;
 
         while(q.size() > 0){
             int pos = q.poll();
-            am.put(pos, cnt++);
+            if(hm.get(pos) == null) continue;
             List<Integer> nodes = hm.get(pos);
             Collections.sort(nodes);
             for(Integer node : nodes){
-                if(vis[node]) continue;
-                vis[node] = true;
+                if(vis[node] != 0) continue;
                 q.add(node);
+                vis[node] = cnt++;
             }
         }
-        for(int i = 1; i <= n; i++) System.out.println(am.get(i));
+        for(int i = 1; i <= n; i++) System.out.println(vis[i]);
 	} 
 }
