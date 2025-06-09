@@ -12,10 +12,10 @@ idx = n - 1
 while len(st) != 0:
     top = st.pop()
     while len(out) != 0:
-        outTop = out[-1]
-        if outTop > top:
+        out_top = out[-1]
+        if out_top > top:
             out.append(top)
-            answer[idx] = str(outTop)
+            answer[idx] = str(out_top)
             break
         else:
             out.pop()
