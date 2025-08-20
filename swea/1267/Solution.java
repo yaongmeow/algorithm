@@ -14,12 +14,9 @@ class Main{
             E = Integer.parseInt(st.nextToken());
             st = new StringTokenizer(br.readLine());
 
-            // int[][] a = new int[E][2];
             int[] indegree = new int [V + 1];
             List<Integer>[] g = new List[V + 1]; for(int i = 1; i <= V; i++) g[i] = new ArrayList<>();
             for(int i = 0; i < E; i++){
-                // a[i][0] = Integer.parseInt(st.nextToken()); // from
-                // a[i][1] = Integer.parseInt(st.nextToken()); // to
                 int from = Integer.parseInt(st.nextToken());
                 int to = Integer.parseInt(st.nextToken());
                 indegree[to] += 1;
