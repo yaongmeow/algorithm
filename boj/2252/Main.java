@@ -29,8 +29,7 @@ public class Main {
                 if(d[b] == 0) q.offer(b);
             }
         }
-        int[] answer = new int[N + 1];
-        int idx = 1;
+        
         while (!order.isEmpty()) {
             System.out.print(order.poll() + " ");
         }
